@@ -11,11 +11,14 @@ const pathToRegexp = require('path-to-regexp')
 const { MockCountProxy } = require('../proxy')
 
 const redisConf = config.get('redis')
-
+console.log(redisConf)
+console.log(redisConf)
+console.log(redisConf)
+console.log(redisConf)
 const redis = new Redis({
-  port:6379,
-  host:'123.206.210.251',
-  password:'pass',
+  port:redisConf.port,
+  host:redisConf.host,
+  password:redisConf.password,
   keyPrefix:'[Easy Mock]'
 })
 
